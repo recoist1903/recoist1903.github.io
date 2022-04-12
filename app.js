@@ -66,7 +66,7 @@ function writeUnsafeOutput(text) {
 function clearOutput() {
     document.getElementById("output").innerText = ""
 }
-writeOutput(`Help [command] gets informations about commands`)
+writeOutput(`Type "help" and enter to list commands.`)
 function helpHandler(args) {
     if (args.length == 0) {
         writeOutput("{parameter} | [optional parameter]\n\n")
