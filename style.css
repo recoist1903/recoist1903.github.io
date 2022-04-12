@@ -1,0 +1,205 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #0f0e1a;
+  font-family: "Source Code Pro", monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#console {
+  width: 95%;
+  height: 95%;
+  margin: 0 auto;
+  background-color: transparent;
+  backdrop-filter: blur(50px);
+  border: 2px solid #8b4dff;
+}
+
+.stil
+{
+  padding:5px 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+.renkdegis 
+{
+  color: white;
+  -webkit-animation-name: text;
+  animation-name: text;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+ 
+ @-webkit-keyframes text {
+    0%   {color:#ff1744;}
+    25%  {color:#6a1b9a;}
+    50%  {color:#1e88e5;}
+    75%  {color:#00c853;}
+    100% {color:#ff1744;}
+}
+
+@keyframes text {
+    0%   {color:#ff1744;}
+    25%  {color:#6a1b9a;}
+    50%  {color:#1e88e5;}
+    75%  {color:#00c853;}
+    100% {color:#ff1744;}
+}
+
+.circle {
+  opacity: 0.85;
+  background: rgb(255, 0, 170);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 0, 170, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  border-radius: 1000px;
+  width: 800px;
+  height: 800px;
+
+  position: fixed;
+  left: 50%;
+  bottom: -20%;
+
+  transform: translate(-50%, 20%);
+  animation: spin 20s infinite linear;
+}
+
+#shell {
+  height: auto;
+  background: transparent;
+  outline: none;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  padding-left: 0px;
+
+  font-family: "Source Code Pro", monospace;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 auto;
+}
+
+#username {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0px;
+  padding-left: 10px;
+}
+
+#output {
+  word-wrap: break-word;
+  padding: 12px;
+  color: rgb(248, 248, 248);
+  font-size: 16px;
+  font-weight: 400;
+  overflow-y: auto;
+  max-height: 80%;
+}
+
+#output a {
+  color: #8b4dff;
+  text-decoration: none;
+}
+
+#output a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  margin: 5px auto;
+  width: 90%;
+  border: 1px solid #8b4dff4f;
+}
+
+#warn-stack {
+  position: absolute;
+  max-width: 320px;
+  height: auto;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1;
+}
+
+.warn {
+  background-color: #ff9d4d3b;
+  border: 1px solid #ff8147;
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  backdrop-filter: blur(50px);
+  color: #ff8147;
+  cursor: pointer;
+}
+
+.warn::after {
+  content: "(Click to destroy the warn)";
+  font-size: 10px;
+  font-weight: 400;
+  display: block;
+  color: #fff;
+}
+
+@media only screen and (max-width: 890px) {
+  .circle {
+    width: 500px;
+    height: 500px;
+    bottom: -10%;
+    transform: translate(-50%, 10%);
+  }
+
+  #username {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  #shell {
+    font-size: 12px;
+  }
+
+  #output {
+    font-size: 12px;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, 20%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, 20%) rotate(360deg);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 250px;
+  background: #8b4dff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a270ff;
+}
