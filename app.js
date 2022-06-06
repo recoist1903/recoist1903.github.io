@@ -88,7 +88,7 @@ function helpHandler(args) {
 }
 
 function aboutHandler(_) {
-    writeOutput(`I'm currently X years old. I like engineering stuffs.
+    writeOutput(`I'm currently ? years old. I like engineering stuffs.
 I’m currently learning C#
 I want to be a software engineer in the future.
 I forgot to mention, I love cats alot!`)
